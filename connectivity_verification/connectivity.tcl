@@ -8,8 +8,11 @@
 # generate assertions to verify that each connection in the CSV is proven in
 # the RTL implementation
 
-if {[string compare  $argv ""] != 0} {
-    set spec [lindex $argv 0]
+if {![info exists ::env(spec)]} {
+    set spec connectivity_verification/tests/direct.csv
+    if {[string compare $argv ""] != 0} {
+        set spec [lindex $argv 0]
+    }
 
     proc assert {args} {puts "DUMMY ASSERT: creating assertion '$args'"}
 }
