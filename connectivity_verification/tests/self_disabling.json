@@ -1,0 +1,190 @@
+{
+  "creator": "Yosys 0.34+43 (git sha1 d21c464ae, clang 12.0.0 -fPIC -Os)",
+  "modules": {
+    "top": {
+      "attributes": {
+        "hdlname": "\\top",
+        "top": "00000000000000000000000000000001",
+        "src": "./self_disabling.v:9.1-14.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "data": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+        "$and$./self_disabling.v:11$1": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "./self_disabling.v:11.19-11.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 6 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$flatten\\dff.$procdff$4": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "./self_disabling.v:12.17-12.43|./self_disabling.v:3.5-5.8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 7 ],
+            "Q": [ 6 ]
+          }
+        },
+        "$flatten\\dff.$ternary$./self_disabling.v:4$3": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "./self_disabling.v:12.17-12.43|./self_disabling.v:4.16-4.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ "0" ],
+            "S": [ 3 ],
+            "Y": [ 7 ]
+          }
+        }
+      },
+      "netnames": {
+        "$flatten\\dff.$0\\dff[0:0]": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "./self_disabling.v:12.17-12.43|./self_disabling.v:3.5-5.8"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "./self_disabling.v:9.18-9.21"
+          }
+        },
+        "data": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "./self_disabling.v:9.40-9.44"
+          }
+        },
+        "dff.clk": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "dff clk",
+            "src": "./self_disabling.v:12.17-12.43|./self_disabling.v:1.26-1.29"
+          }
+        },
+        "dff.data": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "hdlname": "dff data",
+            "src": "./self_disabling.v:12.17-12.43|./self_disabling.v:1.48-1.52"
+          }
+        },
+        "dff.dff": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "hdlname": "dff dff",
+            "src": "./self_disabling.v:12.17-12.43|./self_disabling.v:2.9-2.12"
+          }
+        },
+        "dff.out": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "hdlname": "dff out",
+            "src": "./self_disabling.v:12.17-12.43|./self_disabling.v:1.61-1.64"
+          }
+        },
+        "dff.rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "dff rst",
+            "src": "./self_disabling.v:12.17-12.43|./self_disabling.v:1.37-1.40"
+          }
+        },
+        "gclk": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "./self_disabling.v:10.10-10.14"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "./self_disabling.v:9.53-9.56"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "./self_disabling.v:9.29-9.32"
+          }
+        },
+        "self": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "./self_disabling.v:10.16-10.20"
+          }
+        }
+      }
+    }
+  }
+}

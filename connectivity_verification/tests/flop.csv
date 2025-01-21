@@ -1,0 +1,3 @@
+#,Name,Source Instance,Source Signal,Destination Instance,Destination Signal
+CONNECTION,connection1,,A[3],flop_inst,in[3]
+CONNECTION,connection2,adder_inst,in[3],,flop_out[3]

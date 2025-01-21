@@ -1,0 +1,11 @@
+#,Name,Source Instance,Source Signal,Destination Instance,Destination Signal
+CONNECTION,connection1,,A,,A
+CONNECTION,connection2,,B,,B
+CONNECTION,connection3,,C,,C
+CONNECTION,connection4,,D,,D
+CONNECTION,connection5,,E,,E
+CONNECTION,connection6,,F,,F
+CONNECTION,connection7,,G,,G
+CONNECTION,connection8,,B,,~A
+CONNECTION,connection9,,~A,,B
+CONNECTION,connection10,,F,,!D
