@@ -1,0 +1,79 @@
+Running Formal Connectivity Verification for ./direct.v
+Proving property {inv.a == inv.a}
+ERROR (ENL024): Combinational loop found within the cone of influence for "inv.a".
+Proving property {inv.a == inv.b}
+ERROR (ENL024): Combinational loop found within the cone of influence for "inv.b".
+Proving property {inv.b == inv.a}
+ERROR (ENL024): Combinational loop found within the cone of influence for "inv.a".
+Proving property {inv.b == inv.b}
+ERROR (ENL024): Combinational loop found within the cone of influence for "inv.b".
+Running Structural Connectivity Verification for ./direct.v
+connection1 combinational_loop
+connection2 combinational_loop
+connection3 combinational_loop
+connection4 combinational_loop
+Running Formal Connectivity Verification for ./example.v
+Proving property {A == A}
+proven
+Proving property {B == B}
+proven
+Proving property {C == C}
+proven
+Proving property {D == D}
+ERROR (ENL024): Combinational loop found within the cone of influence for "D".
+Proving property {E == E}
+proven
+Proving property {F == F}
+ERROR (ENL024): Combinational loop found within the cone of influence for "D".
+Proving property {G == G}
+proven
+Proving property {B == ~A}
+proven
+Proving property {~A == B}
+proven
+Proving property {F == !D}
+ERROR (ENL024): Combinational loop found within the cone of influence for "D".
+Running Structural Connectivity Verification for ./example.v
+connection1 connected
+connection2 connected
+connection3 connected
+connection4 combinational_loop
+connection5 connected
+connection6 combinational_loop
+connection7 connected
+connection8 connected
+connection9 connected
+connection10 combinational_loop
+Running Formal Connectivity Verification for ./flop.v
+Proving property {A[3] == flop_inst.in[3]}
+proven
+Proving property {adder_inst.in[3] == flop_out[3]}
+proven
+Running Structural Connectivity Verification for ./flop.v
+connection1 connected
+connection2 connected
+Running Formal Connectivity Verification for ./fully_connected.v
+Proving property {inst.b0 == inst.d0}
+ERROR (ENL024): Combinational loop found within the cone of influence for "a2".
+Running Structural Connectivity Verification for ./fully_connected.v
+connection1 combinational_loop
+Running Formal Connectivity Verification for ./self_disabling.v
+Proving property {gclk == dff.out}
+2.0.Hp: WARNING (WCK008): Flop "dff.dff" has a loop through its clock pin.
+cex
+Proving property {data == dff.data}
+proven
+Running Structural Connectivity Verification for ./self_disabling.v
+connection1 combinational_loop
+connection2 connected
+Running Formal Connectivity Verification for ./two_paths.v
+Proving property {t.a1 == t.a0}
+ERROR (ENL024): Combinational loop found within the cone of influence for "t.a0".
+Proving property {t.a0 == t.a2}
+ERROR (ENL024): Combinational loop found within the cone of influence for "a2".
+Proving property {t.a0 == ~a3}
+ERROR (ENL024): Combinational loop found within the cone of influence for "a3".
+Running Structural Connectivity Verification for ./two_paths.v
+connection1 combinational_loop
+connection2 combinational_loop
+connection3 combinational_loop
